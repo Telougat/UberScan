@@ -1,0 +1,15 @@
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\UberScanEntitiesLib.deps.json
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\UberScanEntitiesLib.runtimeconfig.json
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\UberScanEntitiesLib.runtimeconfig.dev.json
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\UberScanEntitiesLib.dll
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\ref\UberScanEntitiesLib.dll
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\bin\Debug\net5.0\UberScanEntitiesLib.pdb
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.csprojAssemblyReference.cache
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.AssemblyInfoInputs.cache
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.AssemblyInfo.cs
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.csproj.CoreCompileInputs.cache
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.dll
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\ref\UberScanEntitiesLib.dll
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.pdb
+C:\Mémoire\CESI\.NET\UberScan\UberScanEntitiesLib\obj\Debug\net5.0\UberScanEntitiesLib.genruntimeconfig.cache
