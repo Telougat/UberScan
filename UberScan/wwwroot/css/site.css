@@ -5,23 +5,24 @@ a.navbar-brand {
   white-space: normal;
   /*text-align: center;*/
   word-break: break-all;
+  width: 15%;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #FF8000;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #FF8000;
+  border-color: #FF8000;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #FF8000;
+  border-color: #FF8000;
 }
 
 /* Sticky footer styles
@@ -71,6 +72,26 @@ body {
 }
 
 .logo {
-  width: 20%;
+  width: 75%;
   height: auto;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.mangaImage {
+  width: 100%;
+  height: 100%;
+}
+
+.content-image-cover {
+  border-radius: 0px;
+}
+
+@media (max-width: 575.98px) {
+  .logo {
+    width: 140%;
+    height: auto;
+  }
 }

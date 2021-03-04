@@ -254,3 +254,4 @@ C:\Mémoire\CESI\.NET\UberScan\UberScan\obj\Debug\net5.0\UberScan.dll
 C:\Mémoire\CESI\.NET\UberScan\UberScan\obj\Debug\net5.0\ref\UberScan.dll
 C:\Mémoire\CESI\.NET\UberScan\UberScan\obj\Debug\net5.0\UberScan.pdb
 C:\Mémoire\CESI\.NET\UberScan\UberScan\obj\Debug\net5.0\UberScan.genruntimeconfig.cache
+C:\Mémoire\CESI\.NET\UberScan\UberScan\obj\Debug\net5.0\Razor\Views\Home\Manga.cshtml.g.cs

@@ -17,8 +17,7 @@ namespace UberScan.Shared
         }
 
         [Key]
-        [Column("authorID")]
-        public long AuthorId { get; set; }
+        public long AuthorID { get; set; }
         [Required]
         [Column("authorFirstName")]
         public string AuthorFirstName { get; set; }
