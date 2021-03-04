@@ -1,13 +1,16 @@
-<div class="w-full bg-gray-200 h-96 mt-32 rounded">
-    <div class="py-6 px-4">
-        <div id="messagesList" class="even:bg-gray-200 space-y-4"></div>
+<div class="w-full flex justify-center mt-20">
+    <h1 class="text-center text-4xl font-bold">Instant chat<br/>(Nothing are saved)</h1>
+</div>
+<div class="w-full bg-gray-200 h-96 mt-16 rounded">
+    <div class="py-6 px-4 h-full">
+        <div id="messagesList" class="even:bg-gray-200 space-y-4 overflow-y-auto h-full"></div>
     </div>
 </div>
 <div class="mt-6">
     <div class="flex flex-grow-1 justify-between">
-        <input class="w-4/5 px-4 py-2 border border-yellow-500 rounded" type="text" id="messageInput" />
+        <input class="w-4/5 px-4 py-2 border border-yellow-500 rounded" type="text" id="messageInput" placeholder="Type your message here ..." />
         <div class="w-1/5 pl-4">
-            <input class="bg-yellow-500 px-4 py-2 rounded text-center w-full" type="button" id="sendButton" value="Envoyer">
+            <input class="bg-yellow-500 px-4 py-2 rounded text-center w-full" type="button" id="sendButton" value="Send">
         </div>
     </div>
 </div>

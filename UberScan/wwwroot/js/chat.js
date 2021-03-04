@@ -15,10 +15,13 @@ connection.on("ReceiveMessage", function (user, message) {
     var p = document.createElement("p");
     p.innerHTML = encodedMsg;
     document.getElementById("messagesList").appendChild(p);
+    document.getElementById("messagesList").scrollTo(0, document.getElementById("messagesList").scrollHeight);
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
     var message = document.getElementById("messageInput").value;
+    document.getElementById("messageInput").value = "";
+    document.getElementById("messageInput").focus();
     connection.invoke("SendMessage", message).catch(function (err) {
         return console.error(err.toString());
     });
