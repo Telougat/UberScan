@@ -20,6 +20,7 @@ namespace UberScan.Hubs
         public async Task SendMessage(string message)
         {
             var user = _httpContextAccessor.HttpContext.User.Identity.Name; //Get current user
+            user = user.Split("@")[0];
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
     }

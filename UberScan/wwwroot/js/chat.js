@@ -10,11 +10,11 @@ connection.on("ReceiveMessage", function (user, message) {
 
     var msg = message.replace(/&/g, "&")
         .replace(/&/g, ">");
-    var encodedMsg = user + " says " + msg;
+    var encodedMsg = "<span class='text-yellow-500 italic mr-1'>" + user + "</span>" + ": " + msg;
 
-    var li = document.createElement("li");
-    li.textContent = encodedMsg;
-    document.getElementById("messagesList").appendChild(li);
+    var p = document.createElement("p");
+    p.innerHTML = encodedMsg;
+    document.getElementById("messagesList").appendChild(p);
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScan\\UberScan.csproj": {}
+    "E:\\CesiASP\\UberScanProject\\UberScan\\UberScan.csproj": {}
   },
   "projects": {
-    "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\UberScanContextLib.csproj": {
+    "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\UberScanContextLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\UberScanContextLib.csproj",
+        "projectUniqueName": "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\UberScanContextLib.csproj",
         "projectName": "UberScanContextLib",
-        "projectPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\UberScanContextLib.csproj",
-        "packagesPath": "C:\\Users\\juret\\.nuget\\packages\\",
-        "outputPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\obj\\",
+        "projectPath": "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\UberScanContextLib.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo\\.nuget\\packages\\",
+        "outputPath": "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\juret\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lorenzo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -26,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj": {
-                "projectPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj"
+              "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj": {
+                "projectPath": "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj"
               }
             }
           }
@@ -66,17 +69,20 @@
         }
       }
     },
-    "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj": {
+    "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj",
+        "projectUniqueName": "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj",
         "projectName": "UberScanEntitiesLib",
-        "projectPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj",
-        "packagesPath": "C:\\Users\\juret\\.nuget\\packages\\",
-        "outputPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanEntitiesLib\\obj\\",
+        "projectPath": "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\UberScanEntitiesLib.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo\\.nuget\\packages\\",
+        "outputPath": "E:\\CesiASP\\UberScanProject\\UberScanEntitiesLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\juret\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lorenzo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -128,17 +134,20 @@
         }
       }
     },
-    "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScan\\UberScan.csproj": {
+    "E:\\CesiASP\\UberScanProject\\UberScan\\UberScan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScan\\UberScan.csproj",
+        "projectUniqueName": "E:\\CesiASP\\UberScanProject\\UberScan\\UberScan.csproj",
         "projectName": "UberScan",
-        "projectPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScan\\UberScan.csproj",
-        "packagesPath": "C:\\Users\\juret\\.nuget\\packages\\",
-        "outputPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScan\\obj\\",
+        "projectPath": "E:\\CesiASP\\UberScanProject\\UberScan\\UberScan.csproj",
+        "packagesPath": "C:\\Users\\Lorenzo\\.nuget\\packages\\",
+        "outputPath": "E:\\CesiASP\\UberScanProject\\UberScan\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\juret\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lorenzo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -150,8 +159,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\UberScanContextLib.csproj": {
-                "projectPath": "C:\\Mémoire\\CESI\\.NET\\UberScan\\UberScanContextLib\\UberScanContextLib.csproj"
+              "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\UberScanContextLib.csproj": {
+                "projectPath": "E:\\CesiASP\\UberScanProject\\UberScanContextLib\\UberScanContextLib.csproj"
               }
             }
           }
