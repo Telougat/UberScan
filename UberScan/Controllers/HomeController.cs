@@ -23,6 +23,11 @@ namespace UberScan.Controllers
             return View();
         }
 
+        public IActionResult Manga()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

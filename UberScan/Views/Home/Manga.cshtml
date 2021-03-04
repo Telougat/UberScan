@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Manga List";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Manga available</h1>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </p>
+</div>
+<div style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;">
+    <div style="flex: 0 0 25%; max-width: 100%;">
+        <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
+            <div class="card-header">
+                <h5 class="text-center card-title">Dr. Stone</h5>
+            </div>
+            <div class="card-body text-dark" style="height: 34rem;">
+                <img class="mangaImage" src="~/documents/scans/drstone/cover.png" alt="Dr. Stone">
+            </div>
+        </div>
+    </div>
+    <div style="flex: 0 0 25%; max-width: 100%;">
+        <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
+            <div class="card-header">
+                <h5 class="text-center card-title">Dragon Ball</h5>
+            </div>
+            <div class="card-body text-dark" style="height: 34rem;">
+                <img class="mangaImage" src="~/documents/scans/dragonball/dragonball-cover.jpg" alt="Dragon Ball"/>
+            </div>
+        </div>
+    </div>
+    <div style="flex: 0 0 25%; max-width: 100%;">
+        <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
+            <div class="card-header">
+                <h5 class="text-center card-title">Naruto</h5>
+            </div>
+            <div class="card-body text-dark" style="height: 34rem;">
+                <img class="mangaImage" src="~/documents/scans/naruto/naruto-cover.jpg" alt="Naruto"/>
+            </div>
+        </div>
+    </div>
+</div>

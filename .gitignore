@@ -2,5 +2,13 @@ UberScan/.idea
 UserScan/bin
 UberScanContextLib/.idea
 UberScanEntitiesLib/.idea
+UberScan/obj
+UberScanContextLib/obj
+UberScanEntitiesLib/obj
 
+UberScanContextLib/bin
+UberScanEntitiesLib/bin
+
+UberScan/app.db
+UberScan/UberScan.db
 .idea
