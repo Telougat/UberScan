@@ -40,8 +40,16 @@ namespace UberScan.Controllers
         {
             var Manga = db.Mangas.Where(m => m.MangaID == id).SingleOrDefault();
             var Volumes = db.Volumes.Where(v => v.MangaId == id).ToArray();
+            var Publisher = db.Publishers.Where(p => p.PublisherID == Manga.PublisherID).SingleOrDefault();
+            var Author = db.Authors.Where(a => a.AuthorID == Manga.AuthorID).SingleOrDefault();
+            var Translator = db.FrTranslators.Where(ft => ft.TranlatorID == Manga.TranlatorID).SingleOrDefault();
+            var Category = db.Categories.Where(c => c.CategoryID == Manga.CategoryID).SingleOrDefault();
             var model = new VolumeViewModel{
                 Manga = Manga,
+                Publisher = Publisher,
+                Author = Author,
+                Translator = Translator,
+                Category = Category,
                 Volumes = Volumes
             };
             return View(model);

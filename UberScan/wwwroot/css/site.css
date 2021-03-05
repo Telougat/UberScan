@@ -138,6 +138,10 @@ body {
   border-radius: 0px;
 }
 
+.inlineFlex {
+  display: inline-flex;
+}
+
 @media (max-width: 575.98px) {
   .logo {
     width: 140%;

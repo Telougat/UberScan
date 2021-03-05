@@ -8,7 +8,7 @@ Via l'onglet Manga, vous pouvez voir tous les mangas disponibles sur l'applicati
   
 Vous pouvez accéder également à l'url /upload  afin d'upload  des scans de manga en PDF.  
   
-L'application dispose également d'un chat éphémère totalement fonctionnel, vous pouvez discuter avec d'autres utilisateurs en temps réel, cependant aucun message n'est stockées sur le serveur, donc impossible de retrouver un message particulier ! (ce système est totalement volontaire.)  
+L'application dispose également d'un chat éphémère totalement fonctionnel, vous pouvez discuter avec d'autres utilisateurs en temps réel, cependant aucun message n'est stockées sur le serveur, donc impossible de retrouver un message particulier ! (ce système est totalement volontaire.)
   
 ###  Routes  
   

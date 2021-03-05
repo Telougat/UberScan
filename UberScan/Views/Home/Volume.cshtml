@@ -6,6 +6,52 @@
 <div class="text-center">
     <h2 class="mb-4" style="font-size: 40px;">@Model.Manga.MangaNameLat</h2>
 </div>
+<div class="detail-container mb-4 row">
+    <div class="col-8">
+        <div style="display: grid; grid-gap: 1rem;">
+            <div class="inlineFlex">
+                <dt class="mr-2">Latin name of Manga:</dt><dd>@Model.Manga.MangaNameLat</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Japanese name of Manga:</dt><dd>@Model.Manga.MangaNameJap</dd>
+            </div>
+            <div>
+                <dt>Synopsis:</dt><dd>@Model.Manga.MangaSynopsis</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Publication date:</dt><dd>@Model.Manga.PublicationDate</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Production status:</dt><dd>@Model.Manga.Status</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Publisher:</dt><dd>@Model.Publisher.PublisherName</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Author:</dt><dd>@Model.Author.AuthorFirstName @Model.Author.AuthorLastName</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Translator:</dt><dd>@Model.Translator.TranslatorName</dd>
+            </div>
+            <div class="inlineFlex">
+                <dt class="mr-2">Category:</dt><dd>@Model.Category.CategoryLabel</dd>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="d-flex justify-content-center">
+            <img style="width: 50%; height: auto;" src="~/documents/scans/@Model.Manga.LinkImageManga" alt="@Model.Manga.MangaNameLat">
+            <div class="ml-4 card text-center" style="width: 210px; height: 142px;">
+                <div class="card-header" style="font-size: 25px; background: #272424;">
+                    <p class="text-white">UberScan Note</p>
+                </div>
+                <div class="card-body text-dark" style="background: orange;">
+                    <p style="font-size: 50px; font-weight: 500;">@Model.Manga.UberScanNote / 10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="text-center">
     <hr>
     <h2 class="mt-2 mb-4" style="font-size: 30px;">@Model.Manga.MangaNameLat volumes</h2>
