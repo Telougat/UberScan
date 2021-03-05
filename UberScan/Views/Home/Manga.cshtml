@@ -14,45 +14,18 @@
     
     @foreach (UberScan.Shared.Manga manga in @Model.Mangas)
     {
-        <div>@manga.MangaNameLat</div>
+        <a class="mangaLink" href="#">
+            <div style="flex: 0 0 25%; max-width: 100%;">
+                <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
+                    <div class="card-header">
+                        <h5 class="text-center card-title">@manga.MangaNameLat</h5>
+                    </div>
+                    <div class="card-body text-dark effect-color">
+                        <img class="mangaImage" src="~/documents/scans/@manga.LinkImageManga/cover.png" alt="@manga.MangaNameLat">
+                            <p class="synopsis">@manga.MangaSynopsis</p>
+                    </div>
+                </div>
+            </div>
+        </a>
     }
-    <a class="mangaLink" href="#">
-        <div style="flex: 0 0 25%; max-width: 100%;">
-            <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
-                <div class="card-header">
-                    <h5 class="text-center card-title">Dr. Stone</h5>
-                </div>
-                <div class="card-body text-dark effect-color">
-                    <img class="mangaImage" src="~/documents/scans/drstone/cover.png" alt="Dr. Stone">
-                        <p class="synopsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-            </div>
-        </div>
-    </a>
-    <a class="mangaLink" href="#">
-        <div style="flex: 0 0 25%; max-width: 100%;">
-            <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
-                <div class="card-header">
-                    <h5 class="text-center card-title">Dragon Ball</h5>
-                </div>
-                <div class="card-body text-dark effect-color">
-                    <img class="mangaImage" src="~/documents/scans/dragonball/dragonball-cover.jpg" alt="Dragon Ball"/>
-                        <p class="synopsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-            </div>
-        </div>
-    </a>
-    <a class="mangaLink" href="#">
-        <div style="flex: 0 0 25%; max-width: 100%;">
-            <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
-                <div class="card-header">
-                    <h5 class="text-center card-title">Naruto</h5>
-                </div>
-                <div class="card-body text-dark effect-color">
-                    <img class="mangaImage" src="~/documents/scans/naruto/naruto-cover.jpg" alt="Naruto"/>
-                    <p class="synopsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-            </div>
-        </div>
-    </a>
 </div>
