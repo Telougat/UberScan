@@ -4,8 +4,16 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4 mb-4">Volume @Model.Volume.VolumeNum - @Model.MangaVolume.MangaNameLat</h1>
+    <h1 class="display-4 mb-4 text-white">Volume @Model.Volume.VolumeNum - @Model.MangaVolume.MangaNameLat</h1>
 </div>
 <div>
-    coucou
+    <div class="flex justify-center items-center h-full mt-4">
+        <embed src="~/documents/scans/@Model.Volume.LinkVolume/index.pdf" class="w-full" style="height: 750px;" 
+               type="application/pdf">
+    </div>
+    <style>
+        body, #viewerContainer {
+            background-color: rgb(50, 54, 57) !important;
+        }
+    </style>
 </div>

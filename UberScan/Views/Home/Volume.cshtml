@@ -4,7 +4,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4 mb-4">@Model.Manga.MangaNameLat volumes</h1>
+    <h2 class="mb-4" style="font-size: 40px;">@Model.Manga.MangaNameLat</h2>
+</div>
+<div class="text-center">
+    <hr>
+    <h2 class="mt-2 mb-4" style="font-size: 30px;">@Model.Manga.MangaNameLat volumes</h2>
 </div>
 <div class="mb-5 mt-5 gridCardVolume">
     @foreach (UberScan.Shared.Volume volume in @Model.Volumes)
