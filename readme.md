@@ -9,6 +9,10 @@ Via l'onglet Manga, vous pouvez voir tous les mangas disponibles sur l'applicati
 Vous pouvez accéder également à l'url /upload  afin d'upload  des scans de manga en PDF.  
   
 L'application dispose également d'un chat éphémère totalement fonctionnel, vous pouvez discuter avec d'autres utilisateurs en temps réel, cependant aucun message n'est stockées sur le serveur, donc impossible de retrouver un message particulier ! (ce système est totalement volontaire.)
+
+Malheureusement nous n'avons pas eu le temps d'importer tous les PDF de scans des mangas, mais vous pouvez tout de même tester la fonctionnalité de lecture de scan sur tous les tomes de Dr.Stone et de Dragon ball qui sont disponibles.
+
+Et pour finir, vous pouvez filtrer les mangas par nom dans la petite barre de recherche se situant sur la page de mangas disponibles.
   
 ###  Routes  
   
