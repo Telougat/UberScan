@@ -1,0 +1,26 @@
+@model UberScan.Models.VolumeViewModel
+@{
+    ViewData["Title"] = $"{@Model.Manga.MangaNameLat} volumes";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">@Model.Manga.MangaNameLat volumes</h1>
+</div>
+<div class="mb-5 mt-5 gridCardVolume">
+    @foreach (UberScan.Shared.Volume volume in @Model.Volumes)
+    {
+        <a class="mangaLink" href="/Home/Volume/@volume.VolumeId">
+            <div style="flex: 0 0 25%; max-width: 100%;">
+                <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
+                    <div class="card-header">
+                        <h5 class="text-center card-title">Volume @volume.VolumeNum</h5>
+                    </div>
+                    <div class="card-body text-dark">
+                        <img class="mangaImage" src="~/documents/scans/@volume.LinkImageVolume" alt="@Model.Manga.MangaNameLat volume @volume.VolumeNum">
+                            <p class="synopsis">@volume.VolumeSynopsis</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    }
+</div>

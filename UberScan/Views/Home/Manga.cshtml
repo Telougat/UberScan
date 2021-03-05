@@ -9,7 +9,7 @@
 <div class="mb-5 mt-5 gridCardManga">
     @foreach (UberScan.Shared.Manga manga in @Model.Mangas)
     {
-        <a class="mangaLink" href="#">
+        <a class="mangaLink" href="/Home/Manga/@manga.MangaID">
             <div style="flex: 0 0 25%; max-width: 100%;">
                 <div class="card border-dark mb-3 content-image-cover" style="max-width: 100%;">
                     <div class="card-header">
