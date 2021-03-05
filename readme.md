@@ -1,7 +1,13 @@
 #  Uberscan  
   
 Nous vous présentons le projet  UberScan, le but est simple, c'est une application permettant de lire des scans de manga.  
-  
+
+##  Installation du projet
+Pour installer le projet vous devez suivre ces étapes :
+- Compiler le projet, à la racine du sous-dossier UberScan entrer la commande suivante : dotnet build
+- Démarrer le site, à la racine du sous-dossier UberScan entrer la commande suivante : dotnet run
+- Et enfin accéder à la page d'accueil en local dans votre navigateur depuis cette adresse : https://localhost:5001 ou http://localhost:5000
+
 ##  Fonctionnalitées  
   
 Via l'onglet Manga, vous pouvez voir tous les mangas disponibles sur l'application, si vous en sélectionner un, vous verrez tous les volumes disponibles. Ensuite, si vous cliquez sur un des volumes, une fenêtre s'ouvre avec le scan du volume afin que vous puissiez directement le lire.  
