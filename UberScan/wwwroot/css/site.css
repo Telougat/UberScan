@@ -76,22 +76,57 @@ body {
   height: auto;
 }
 
-.card-body {
-  padding: 0;
-}
-
-.mangaImage {
-  width: 100%;
-  height: 100%;
-}
-
-.content-image-cover {
-  border-radius: 0px;
-}
-
 @media (max-width: 575.98px) {
   .logo {
     width: 140%;
     height: auto;
   }
+}
+
+.mangaLink {
+  text-decoration: none !important;
+}
+
+.card-title {
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.effect-color {
+  background: black;
+}
+
+.mangaImage {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.effect-color:hover img{
+  opacity: .2;
+}
+
+.synopsis {
+  top: 20%;
+  position: absolute;
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  display: none;
+}
+
+.effect-color:hover p{
+  display: block;
+}
+
+.content-image-cover {
+  border-radius: 0px;
 }

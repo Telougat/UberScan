@@ -21,8 +21,8 @@ namespace UberScan.Shared
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<FavouriteManga> FavouriteMangas { get; set; }
         public virtual DbSet<FrTranslator> FrTranslators { get; set; }
+        public virtual DbSet<LinkFavouriteManga> LinkFavouriteMangas { get; set; }
         public virtual DbSet<Manga> Mangas { get; set; }
-        public virtual DbSet<MangaLinkFavourite> MangaLinkFavourites { get; set; }
         public virtual DbSet<MangaTag> MangaTags { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
@@ -32,95 +32,95 @@ namespace UberScan.Shared
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite("Filename=../UberScan.db");
+                optionsBuilder.UseSqlite("Filename=../UberScan/UberScan.db");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /*modelBuilder.Entity<Author>(entity =>
+            modelBuilder.Entity<Author>(entity =>
             {
-                entity.Property(e => e.AuthorId).ValueGeneratedNever();
+                entity.Property(e => e.AuthorID).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.Property(e => e.CategoryId).ValueGeneratedNever();
+                entity.Property(e => e.CategoryID).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<FavouriteManga>(entity =>
             {
-                entity.Property(e => e.FavouriteMangaId).ValueGeneratedNever();
+                entity.Property(e => e.FavouriteMangaID).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<FrTranslator>(entity =>
             {
-                entity.Property(e => e.TranlatorId).ValueGeneratedNever();
+                entity.Property(e => e.TranlatorID).ValueGeneratedNever();
+            });
+
+            modelBuilder.Entity<LinkFavouriteManga>(entity =>
+            {
+                entity.HasKey(e => new { e.FavouriteMangaID, e.MangaID });
+
+                entity.HasOne(d => d.FavouriteManga)
+                    .WithMany(p => p.LinkFavouriteMangas)
+                    .HasForeignKey(d => d.FavouriteMangaID)
+                    .OnDelete(DeleteBehavior.ClientSetNull);
+
+                entity.HasOne(d => d.Manga)
+                    .WithMany(p => p.LinkFavouriteMangas)
+                    .HasForeignKey(d => d.MangaID)
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<Manga>(entity =>
             {
-                entity.Property(e => e.MangaId).ValueGeneratedNever();
+                entity.Property(e => e.MangaID).ValueGeneratedNever();
 
                 entity.HasOne(d => d.Author)
                     .WithMany(p => p.Mangas)
-                    .HasForeignKey(d => d.AuthorId)
+                    .HasForeignKey(d => d.AuthorID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Mangas)
-                    .HasForeignKey(d => d.CategoryId)
+                    .HasForeignKey(d => d.CategoryID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Publisher)
                     .WithMany(p => p.Mangas)
-                    .HasForeignKey(d => d.PublisherId)
+                    .HasForeignKey(d => d.PublisherID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Tranlator)
                     .WithMany(p => p.Mangas)
-                    .HasForeignKey(d => d.TranlatorId)
-                    .OnDelete(DeleteBehavior.ClientSetNull);
-            });
-
-            modelBuilder.Entity<MangaLinkFavourite>(entity =>
-            {
-                entity.HasKey(e => new { e.FavouriteMangaId, e.MangaId });
-
-                entity.HasOne(d => d.FavouriteManga)
-                    .WithMany(p => p.MangaLinkFavourites)
-                    .HasForeignKey(d => d.FavouriteMangaId)
-                    .OnDelete(DeleteBehavior.ClientSetNull);
-
-                entity.HasOne(d => d.Manga)
-                    .WithMany(p => p.MangaLinkFavourites)
-                    .HasForeignKey(d => d.MangaId)
+                    .HasForeignKey(d => d.TranlatorID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<MangaTag>(entity =>
             {
-                entity.HasKey(e => new { e.MangaId, e.TagId });
+                entity.HasKey(e => new { e.MangaID, e.TagID });
 
                 entity.HasOne(d => d.Manga)
                     .WithMany(p => p.MangaTags)
-                    .HasForeignKey(d => d.MangaId)
+                    .HasForeignKey(d => d.MangaID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Tag)
                     .WithMany(p => p.MangaTags)
-                    .HasForeignKey(d => d.TagId)
+                    .HasForeignKey(d => d.TagID)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<Publisher>(entity =>
             {
-                entity.Property(e => e.PublisherId).ValueGeneratedNever();
+                entity.Property(e => e.PublisherID).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<Tag>(entity =>
             {
-                entity.Property(e => e.TagId).ValueGeneratedNever();
+                entity.Property(e => e.TagID).ValueGeneratedNever();
             });
 
             modelBuilder.Entity<Volume>(entity =>
@@ -131,7 +131,7 @@ namespace UberScan.Shared
                     .WithMany(p => p.Volumes)
                     .HasForeignKey(d => d.MangaId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
-            });*/
+            });
 
             OnModelCreatingPartial(modelBuilder);
         }

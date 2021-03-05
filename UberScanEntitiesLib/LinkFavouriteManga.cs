@@ -8,20 +8,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace UberScan.Shared
 {
-    public partial class MangaTag
+    [Table("linkFavouriteManga")]
+    public partial class LinkFavouriteManga
     {
+        [Key]
+        [Column("favouriteMangaID", TypeName = "Int")]
+        public long FavouriteMangaID { get; set; }
         [Key]
         [Column("mangaID", TypeName = "Int")]
         public long MangaID { get; set; }
-        [Key]
-        [Column("tagID", TypeName = "Int")]
-        public long TagID { get; set; }
 
+        [ForeignKey(nameof(FavouriteMangaID))]
+        [InverseProperty("LinkFavouriteMangas")]
+        public virtual FavouriteManga FavouriteManga { get; set; }
         [ForeignKey(nameof(MangaID))]
-        [InverseProperty("MangaTags")]
+        [InverseProperty("LinkFavouriteMangas")]
         public virtual Manga Manga { get; set; }
-        [ForeignKey(nameof(TagID))]
-        [InverseProperty("MangaTags")]
-        public virtual Tag Tag { get; set; }
     }
 }

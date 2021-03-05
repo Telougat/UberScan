@@ -12,22 +12,22 @@ namespace UberScan.Shared
     public partial class Volume
     {
         [Key]
-        [Column("volumeID")]
+        [Column("volumeID", TypeName = "Int")]
         public long VolumeId { get; set; }
-        [Column("volumeNum")]
+        [Column("volumeNum", TypeName = "Int")]
         public long VolumeNum { get; set; }
-        [Required]
-        [Column("volumeSynopsis")]
+        [Column("volumeSynopsis", TypeName = "Longtext")]
         public string VolumeSynopsis { get; set; }
         [Required]
-        [Column("publicationDate", TypeName = "NUMERIC")]
+        [Column("publicationDate", TypeName = "Date")]
         public byte[] PublicationDate { get; set; }
-        [Required]
-        [Column("linkVolume")]
+        [Column("linkVolume", TypeName = "Varchar (255)")]
         public string LinkVolume { get; set; }
-        [Column("numberConsult")]
-        public long NumberConsult { get; set; }
-        [Column("mangaID")]
+        [Column("numberConsult", TypeName = "Int")]
+        public long? NumberConsult { get; set; }
+        [Column("linkImageVolume", TypeName = "Varchar (255)")]
+        public string LinkImageVolume { get; set; }
+        [Column("mangaID", TypeName = "Int")]
         public long MangaId { get; set; }
 
         [ForeignKey(nameof(MangaId))]

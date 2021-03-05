@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UberScan.Models;
+using UberScan.Shared;
 
 namespace UberScan.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private UberScan.Shared.UberScan db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, UberScan.Shared.UberScan injectedContext)
         {
             _logger = logger;
+            db = injectedContext;
         }
 
         public IActionResult Index()
@@ -25,7 +28,11 @@ namespace UberScan.Controllers
 
         public IActionResult Manga()
         {
-            return View();
+            var Mangas = db.Mangas.ToArray();
+            var model = new MangaViewModel{
+                Mangas = Mangas
+            };
+            return View(model);
         }
 
         public IActionResult Privacy()

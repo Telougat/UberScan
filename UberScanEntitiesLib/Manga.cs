@@ -13,54 +13,55 @@ namespace UberScan.Shared
     {
         public Manga()
         {
-            MangaLinkFavourites = new HashSet<MangaLinkFavourite>();
+            LinkFavouriteMangas = new HashSet<LinkFavouriteManga>();
             MangaTags = new HashSet<MangaTag>();
             Volumes = new HashSet<Volume>();
         }
 
         [Key]
-        [Column("mangaID")]
-        public long MangaId { get; set; }
-        [Required]
-        [Column("mangaNameLat")]
+        [Column("mangaID", TypeName = "Int")]
+        public long MangaID { get; set; }
+        [Column("mangaNameLat", TypeName = "Varchar (255)")]
+        [StringLength(255)]
         public string MangaNameLat { get; set; }
-        [Required]
-        [Column("mangaNameJap")]
+        [Column("mangaNameJap", TypeName = "Varchar (255)")]
+        [StringLength(255)]
         public string MangaNameJap { get; set; }
-        [Required]
-        [Column("mangaSynopsis")]
+        [Column("mangaSynopsis", TypeName = "Longtext")]
         public string MangaSynopsis { get; set; }
         [Required]
-        [Column("publicationDate", TypeName = "NUMERIC")]
-        public byte[] PublicationDate { get; set; }
-        [Column("uberScanNote")]
+        [Column("publicationDate", TypeName = "Date")]
+        public DateTime? PublicationDate { get; set; }
+        [Column("uberScanNote", TypeName = "Int")]
         public long UberScanNote { get; set; }
-        [Required]
-        [Column("status")]
+        [Column("status", TypeName = "Varchar (20)")]
+        [StringLength(20)]
         public string Status { get; set; }
-        [Column("publisherID")]
-        public long PublisherId { get; set; }
-        [Column("authorID")]
-        public long AuthorId { get; set; }
-        [Column("tranlatorID")]
-        public long TranlatorId { get; set; }
-        [Column("categoryID")]
-        public long CategoryId { get; set; }
+        [Column("linkImageManga", TypeName = "Longtext")]
+        public string LinkImageManga { get; set; }
+        [Column("publisherID", TypeName = "Int")]
+        public long PublisherID { get; set; }
+        [Column("authorID", TypeName = "Int")]
+        public long AuthorID { get; set; }
+        [Column("tranlatorID", TypeName = "Int")]
+        public long TranlatorID { get; set; }
+        [Column("categoryID", TypeName = "Int")]
+        public long CategoryID { get; set; }
 
-        [ForeignKey(nameof(AuthorId))]
+        [ForeignKey(nameof(AuthorID))]
         [InverseProperty("Mangas")]
         public virtual Author Author { get; set; }
-        [ForeignKey(nameof(CategoryId))]
+        [ForeignKey(nameof(CategoryID))]
         [InverseProperty("Mangas")]
         public virtual Category Category { get; set; }
-        [ForeignKey(nameof(PublisherId))]
+        [ForeignKey(nameof(PublisherID))]
         [InverseProperty("Mangas")]
         public virtual Publisher Publisher { get; set; }
-        [ForeignKey(nameof(TranlatorId))]
+        [ForeignKey(nameof(TranlatorID))]
         [InverseProperty(nameof(FrTranslator.Mangas))]
         public virtual FrTranslator Tranlator { get; set; }
-        [InverseProperty(nameof(MangaLinkFavourite.Manga))]
-        public virtual ICollection<MangaLinkFavourite> MangaLinkFavourites { get; set; }
+        [InverseProperty(nameof(LinkFavouriteManga.Manga))]
+        public virtual ICollection<LinkFavouriteManga> LinkFavouriteMangas { get; set; }
         [InverseProperty(nameof(MangaTag.Manga))]
         public virtual ICollection<MangaTag> MangaTags { get; set; }
         [InverseProperty(nameof(Volume.Manga))]

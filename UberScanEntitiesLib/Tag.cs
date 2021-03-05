@@ -17,13 +17,15 @@ namespace UberScan.Shared
         }
 
         [Key]
-        [Column("tagID")]
-        public long TagId { get; set; }
+        [Column("tagID", TypeName = "Int")]
+        public long TagID { get; set; }
         [Required]
-        [Column("tagLabel")]
+        [Column("tagLabel", TypeName = "Varchar (40)")]
+        [StringLength(40)]
         public string TagLabel { get; set; }
         [Required]
-        [Column("tagDescription")]
+        [Column("tagDescription", TypeName = "Varchar (255)")]
+        [StringLength(255)]
         public string TagDescription { get; set; }
 
         [InverseProperty(nameof(MangaTag.Tag))]

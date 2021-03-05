@@ -13,16 +13,16 @@ namespace UberScan.Shared
     {
         public FavouriteManga()
         {
-            MangaLinkFavourites = new HashSet<MangaLinkFavourite>();
+            LinkFavouriteMangas = new HashSet<LinkFavouriteManga>();
         }
 
         [Key]
-        [Column("favouriteMangaID")]
-        public long FavouriteMangaId { get; set; }
-        [Column("userID")]
-        public long UserId { get; set; }
+        [Column("favouriteMangaID", TypeName = "Int")]
+        public long FavouriteMangaID { get; set; }
+        [Column("userID", TypeName = "Int")]
+        public long UserID { get; set; }
 
-        [InverseProperty(nameof(MangaLinkFavourite.FavouriteManga))]
-        public virtual ICollection<MangaLinkFavourite> MangaLinkFavourites { get; set; }
+        [InverseProperty(nameof(LinkFavouriteManga.FavouriteManga))]
+        public virtual ICollection<LinkFavouriteManga> LinkFavouriteMangas { get; set; }
     }
 }

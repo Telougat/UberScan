@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UberScan.Hubs;
+using System.IO;
+using UberScan.Shared;
 
 namespace UberScan
 {
@@ -38,6 +40,10 @@ namespace UberScan
             services.AddControllersWithViews();
             
             services.AddSignalR();
+
+            string databasePath = "UberScan.db";
+            services.AddDbContext<UberScan.Shared.UberScan>(options =>
+                options.UseSqlite($"Data Source={databasePath}"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

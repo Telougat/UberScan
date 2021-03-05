@@ -17,13 +17,14 @@ namespace UberScan.Shared
         }
 
         [Key]
-        [Column("categoryID")]
-        public long CategoryId { get; set; }
+        [Column("categoryID", TypeName = "Int")]
+        public long CategoryID { get; set; }
         [Required]
-        [Column("categoryLabel")]
+        [Column("categoryLabel", TypeName = "Varchar (40)")]
+        [StringLength(40)]
         public string CategoryLabel { get; set; }
         [Required]
-        [Column("categoryDescription")]
+        [Column("categoryDescription", TypeName = "Longtext")]
         public string CategoryDescription { get; set; }
 
         [InverseProperty(nameof(Manga.Category))]

@@ -17,22 +17,23 @@ namespace UberScan.Shared
         }
 
         [Key]
-        [Column("publisherID")]
-        public long PublisherId { get; set; }
+        [Column("publisherID", TypeName = "Int")]
+        public long PublisherID { get; set; }
         [Required]
-        [Column("publisherName")]
+        [Column("publisherName", TypeName = "Varchar (40)")]
+        [StringLength(40)]
         public string PublisherName { get; set; }
-        [Required]
-        [Column("nationality")]
+        [Column("nationality", TypeName = "Varchar (40)")]
+        [StringLength(40)]
         public string Nationality { get; set; }
         [Required]
-        [Column("creationDate", TypeName = "NUMERIC")]
-        public byte[] CreationDate { get; set; }
-        [Required]
-        [Column("headOffice")]
+        [Column("creationDate", TypeName = "Date")]
+        public DateTime CreationDate { get; set; }
+        [Column("headOffice", TypeName = "Varchar (100)")]
+        [StringLength(100)]
         public string HeadOffice { get; set; }
-        [Required]
-        [Column("webSite")]
+        [Column("webSite", TypeName = "Varchar (255)")]
+        [StringLength(255)]
         public string WebSite { get; set; }
 
         [InverseProperty(nameof(Manga.Publisher))]

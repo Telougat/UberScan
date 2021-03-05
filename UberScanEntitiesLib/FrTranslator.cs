@@ -17,10 +17,11 @@ namespace UberScan.Shared
         }
 
         [Key]
-        [Column("tranlatorID")]
-        public long TranlatorId { get; set; }
+        [Column("tranlatorID", TypeName = "Int")]
+        public long TranlatorID { get; set; }
         [Required]
-        [Column("translatorName")]
+        [Column("translatorName", TypeName = "Varchar (40)")]
+        [StringLength(40)]
         public string TranslatorName { get; set; }
 
         [InverseProperty(nameof(Manga.Tranlator))]
