@@ -1,8 +1,12 @@
-﻿@model dynamic
-
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+﻿@{
+    ViewData["Title"] = "Upload";
 }
 
-<h2>title</h2>
+<form method="post" enctype="multipart/form-data" asp-controller="Upload" asp-action="Index">
+
+    <span>Select File:</span>
+    <input type="file" name="postedFiles" multiple />
+    <input type="submit" value="Upload" />
+    <br />
+    <span>@Html.Raw(ViewBag.Message)</span>
+</form>
