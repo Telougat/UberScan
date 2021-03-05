@@ -71,16 +71,23 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+.gridCardManga {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 7rem;
+}
+
+.gridCardVolume {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+}
+
 .logo {
   width: 75%;
   height: auto;
-}
-
-@media (max-width: 575.98px) {
-  .logo {
-    width: 140%;
-    height: auto;
-  }
 }
 
 .mangaLink {
@@ -129,4 +136,18 @@ body {
 
 .content-image-cover {
   border-radius: 0px;
+}
+
+@media (max-width: 575.98px) {
+  .logo {
+    width: 140%;
+    height: auto;
+  }
+
+  .gridCardManga {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 7rem;
+    }
 }
