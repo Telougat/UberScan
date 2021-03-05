@@ -78,6 +78,13 @@ body {
   grid-gap: 7rem;
 }
 
+.gridCardVolume {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+}
+
 .logo {
   width: 75%;
   height: auto;
@@ -137,5 +144,10 @@ body {
     height: auto;
   }
 
-
+  .gridCardManga {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 7rem;
+    }
 }
