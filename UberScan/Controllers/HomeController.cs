@@ -38,7 +38,7 @@ namespace UberScan.Controllers
                 return View(model);
             }
             else {
-                var Mangas = db.Mangas.ToArray().Where(m => m.MangaNameLat == search);
+                var Mangas = db.Mangas.ToArray().Where(m => m.MangaNameLat.Contains(search));
                 var model = new MangaViewModel{
                     Mangas = Mangas
                 };
