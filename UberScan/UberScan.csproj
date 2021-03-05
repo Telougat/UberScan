@@ -15,6 +15,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UberScanContextLib\UberScanContextLib.csproj"/>
+    <ProjectReference Include="..\UberScanContextLib\UberScanContextLib.csproj" />
   </ItemGroup>
 </Project>
