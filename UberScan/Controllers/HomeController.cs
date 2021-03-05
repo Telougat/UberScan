@@ -35,6 +35,30 @@ namespace UberScan.Controllers
             return View(model);
         }
 
+        [Route("/Home/Manga/{id}")]
+        public IActionResult Volume(int? id)
+        {
+            var Manga = db.Mangas.Where(m => m.MangaID == id).SingleOrDefault();
+            var Volumes = db.Volumes.Where(v => v.MangaId == id).ToArray();
+            var model = new VolumeViewModel{
+                Manga = Manga,
+                Volumes = Volumes
+            };
+            return View(model);
+        }
+
+        [Route("/Home/Volume/{id}")]
+        public IActionResult Scan(int? id)
+        {
+            var Volume = db.Volumes.Where(v => v.VolumeId == id).SingleOrDefault();
+            var Manga = db.Mangas.Where(m => m.MangaID == Volume.MangaId).SingleOrDefault();
+            var model = new ScanViewModel{
+                MangaVolume = Manga,
+                Volume = Volume
+            };
+            return View(model);
+        }
+
         public IActionResult Privacy()
         {
             return View();
