@@ -2,11 +2,49 @@
     ViewData["Title"] = "Upload";
 }
 
-<form method="post" enctype="multipart/form-data" asp-controller="Upload" asp-action="Index">
+@* <form method="post" enctype="multipart/form-data" asp-controller="Upload" asp-action="Index"> *@
+@* *@
+@*   <label class="form-label">Choisissez un manga un volume à upload :</label> *@
+@*   <input class="form-control form-control-lg" type="file" name="postedFiles" multiple /> *@
+@*   <input type="submit" value="Upload" /> *@
+@*   <br /> *@
+@*   <span>@Html.Raw(ViewBag.Message)</span> *@
+@* </form> *@
 
-    <span>Select File:</span>
-    <input type="file" name="postedFiles" multiple />
-    <input type="submit" value="Upload" />
-    <br />
-    <span>@Html.Raw(ViewBag.Message)</span>
+<form method="post" enctype="multipart/form-data" asp-controller="Upload" asp-action="Index">
+  <br />
+  <div class="container my-4">
+    <hr>
+    <br>
+    <p class="note note-info"><strong>Ajouter un volume :</strong><br><br>
+    </p>
+
+    <div class="row">
+      <div class="col-md-6 mb-4">
+
+        <section class="section-preview">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Nom</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="Name">
+            </div>
+          <div class="input-group my-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Ajouter</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="postedFiles" multiple />
+              <label class="custom-file-label">Choisissez un fichier (pdf)</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Upload">Mettre en ligne</button><br>
+          <span>@Html.Raw(ViewBag.Message)</span>
+        </section>
+        
+      </div>
+    </div>
+
+  </div>
+  <p class="note note-info"><strong>Note: </strong> Nous prenons en charge uniquement les fichiers de type PDF actuellement.</p>
 </form>

@@ -34,12 +34,12 @@ namespace UberScan.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(List<IFormFile> postedFiles)
+        public IActionResult Index(List<IFormFile> postedFiles, String name)
         {
             string wwwPath = this.Environment.WebRootPath;
             string contentPath = this.Environment.ContentRootPath;
 
-            string path = Path.Combine(this.Environment.WebRootPath, "~/documents/scans");
+            string path = Path.Combine(this.Environment.WebRootPath, $"documents/scans/{name}");
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -53,7 +53,7 @@ namespace UberScan.Controllers
                 {
                     postedFile.CopyTo(stream);
                     uploadedFiles.Add(fileName);
-                    ViewBag.Message += string.Format("{0}", fileName);
+                    ViewBag.Message += string.Format("{0} a bien été enregistré.", fileName);
                 }
             }
 
