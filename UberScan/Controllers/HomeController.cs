@@ -29,21 +29,21 @@ namespace UberScan.Controllers
         //[Route("/Home/Manga/{search}")]
         public IActionResult Manga(string search)
         { //All
-            //if(search == "All")
-            //{
+            if(search == "All")
+            {
                 var Mangas = db.Mangas.ToArray();
                 var model = new MangaViewModel{
                     Mangas = Mangas
                 };
                 return View(model);
-            //}
-            /*else {
+            }
+            else {
                 var Mangas = db.Mangas.ToArray().Where(m => m.MangaNameLat == search);
                 var model = new MangaViewModel{
                     Mangas = Mangas
                 };
                 return View(model);
-            }*/
+            }
             
         }
 
