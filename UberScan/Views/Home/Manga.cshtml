@@ -1,6 +1,7 @@
 @model UberScan.Models.MangaViewModel
 @{
     ViewData["Title"] = "Manga List";
+    ViewData["KeyFilter"] = "nom";
 }
 
 <div class="text-center">
@@ -11,28 +12,28 @@
 
     <div class="col-md-4 offset-md-8">
         <div class="row col-md-12 form-check" style="display:inline-flex;">
-            <div class="form-check" style="margin-left:1em;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+            <div class="form-check" style="margin-left:1em;" asp-for="keyFilter">
+                <input class="form-check-input" type="radio" name="RadioNom" id="flexRadioDefault1" checked>
                 <label class="form-check-label" for="flexRadioDefault1">
                     Nom
                 </label>
             </div>
             <div class="form-check" style="margin-left:1em;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="RadioAuteur" id="flexRadioDefault2">
                 <label class="form-check-label" for="flexRadioDefault2">
                     Auteur
                 </label>
             </div>
             <div class="form-check" style="margin-left:1em;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <input class="form-check-input" type="radio" name="RadioGenre" id="flexRadioDefault3">
                 <label class="form-check-label" for="flexRadioDefault3">
                     Genre
                 </label>
             </div>
         </div>
         <div class="row col-md-12">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" href="/Home/Manga" method="GET">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Recherche" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
         </div>
@@ -57,3 +58,16 @@
     </div>
 
 </div>
+
+
+<script>
+    function setFilterRouteParameter()
+    {
+        var value = document.getElementById("addActivityPrice").attr('href')  + '/'  ;
+        console.log(value);
+        /*
+        var newHref = $("#addActivityPrice").attr('href') + '/' + g_id ;     
+        $("#addActivityPrice").attr("href", newhref); */
+    }
+</script>
+

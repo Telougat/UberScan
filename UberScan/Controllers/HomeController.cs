@@ -26,14 +26,63 @@ namespace UberScan.Controllers
             return View();
         }
 
-        public IActionResult Manga()
-        {
-            var Mangas = db.Mangas.ToArray();
-            var model = new MangaViewModel{
-                Mangas = Mangas
-            };
-            return View(model);
+        //[Route("/Home/Manga/{search}")]
+        public IActionResult Manga(string search)
+        { //All
+            //if(search == "All")
+            //{
+                var Mangas = db.Mangas.ToArray();
+                var model = new MangaViewModel{
+                    Mangas = Mangas
+                };
+                return View(model);
+            //}
+            /*else {
+                var Mangas = db.Mangas.ToArray().Where(m => m.MangaNameLat == search);
+                var model = new MangaViewModel{
+                    Mangas = Mangas
+                };
+                return View(model);
+            }*/
+            
         }
+
+/*
+        [Route("/Home/Manga/{search}")]
+        public IActionResult FilterManga(string search)
+        {
+            Console.WriteLine(search);
+            //Console.WriteLine(textFilter);
+            Console.WriteLine(ViewData["KeyFilter"]);
+            var listeMangas = db.Mangas.ToArray();
+            var model = new MangaViewModel{
+                Mangas = listeMangas
+            };
+
+            switch(ViewData["KeyFilter"])
+            {
+                case "nom" : 
+                    var MangasByName = db.Mangas.ToArray();
+                    model = new MangaViewModel{
+                        Mangas = MangasByName
+                    };
+                    break;
+                case "auteur":
+                    var MangasByAuthor = db.Mangas.ToArray();
+                    model = new MangaViewModel{
+                        Mangas = MangasByAuthor
+                    };
+                    break;
+                case "genre" :
+                    var MangasByGenre = db.Mangas.ToArray();
+                    model = new MangaViewModel{
+                        Mangas = MangasByGenre
+                    };
+                    break;
+            }
+
+            return View(model);
+        }*/
 
         [Route("/Home/Manga/{id}")]
         public IActionResult Volume(int? id)
