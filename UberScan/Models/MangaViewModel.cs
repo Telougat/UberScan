@@ -6,5 +6,7 @@ namespace UberScan.Models
 {
     public class MangaViewModel{
         public IEnumerable<Manga> Mangas {get;set;}
+
+        public string keyFilter {get;set;}
     }
 }
